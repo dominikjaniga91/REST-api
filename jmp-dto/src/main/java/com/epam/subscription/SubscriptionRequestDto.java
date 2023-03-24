@@ -12,8 +12,20 @@ class SubscriptionRequestDto {
     private Long id;
     private Long userId;
 
-    public Long getUserId() {
-        return this.userId;
+    Long getId() {
+        return id;
+    }
+
+    void setId(Long id) {
+        this.id = id;
+    }
+
+    Long getUserId() {
+        return userId;
+    }
+
+    void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     Subscription toSubscription(User user) {

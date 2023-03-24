@@ -9,6 +9,18 @@ class SubscriptionResponseDto {
     private Long userId;
     private String startDate;
 
+    public Long getId() {
+        return id;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
     public SubscriptionResponseDto(Long id, Long userId, String startDate) {
         this.id = id;
         this.userId = userId;
