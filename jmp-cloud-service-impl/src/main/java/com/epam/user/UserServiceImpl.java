@@ -23,8 +23,7 @@ class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto createUser(UserRequestDto userRequestDto) {
-        ConversionService conversionService1 = this.conversionService;
-        User user = conversionService1.convert(userRequestDto, User.class);
+        User user = this.conversionService.convert(userRequestDto, User.class);
         User savedUser = this.repository.save(user);
         return this.conversionService.convert(savedUser, UserResponseDto.class);
     }
